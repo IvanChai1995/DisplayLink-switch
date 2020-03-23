@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+    <style>
+    .table1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  border-collapse: collapse;
+  color: black;
+  position:absolute;
+  top: 110px;
+  left: 400px;
+}
+caption {
+  padding: 10px;
+  color: white;
+  background: #8FD4C1;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+.th1 {
+  border-bottom: 3px solid #B9B29F;
+  padding: 10px;
+  text-align: left;
+}
+.td1 {
+  padding: 10px;
+}
+
+
+.td2 {
+  padding-right: 60px;
+}
+
+.tr1:nth-child(odd) {
+  background: white;
+}
+.tr1:nth-child(even) {
+  background: #E8E6D1;
+}
+.tr1:hover {
+  padding: 10px;
+  background: #8A2BE2;
+    text-color:black;
+}
+
+    .h111 {
+   	position: absolute;
+   	left: 400px;
+   	top: -10px;
+   }
+
+a {text-decoration: none;
+    color: black;
+             font-size: 13px;}
+.style_input4{
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #F6F6f6;
+         border-radius: 8px;
+         width: 100px;
+         height: 15px;
+    position: absolute;
+   	left: 20px;
+   	top: 120px;
+   }
+.style_input4:hover{
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #8A2BE2;
+         border-radius: 8px;
+         width: 100px;
+         height: 15px;
+    position: absolute;
+   	left: 20px;
+   	top: 120px;
+   }
+
+    </style>
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=142)}}">
+</head>
+<body>
+	<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom">
+<div>
+    	<br><br><br><br><h2>Комнаты:</h2>
+<div id="block1">
+</div>
+<div id="line1">
+</div>
+<div id="line2">
+</div>
+<h1 class="h111">Список жильцов</h1>
+<table class="table1" border="0">
+    <thead>
+      <td class="td1">Номер</td>
+      <td class="td1">ФИО</td>
+      <td class="td1">Эл. Почта</td>
+      <td class="td1">Дата вселения</td>
+      <td class="td1">Дата выселения</td>
+    </thead>
+    {% for row in rows %}
+      <tr class="tr1">
+          <td class="td1">{{row["id"]}}</td>
+          <td class="td1">{{row["name"]}}</td>
+          <td class="td1">{{row["email"]}}</td>
+          <td class="td1">{{row["StartDate"]}}</td>
+          <td class="td1">{{row["EndDate"]}}</td>
+      </tr>
+    {% endfor %}
+</table>
+<br><br>
+
+<br><br><h2 class="style_input4"><a href="/">< Назад</a></h2>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employee</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=145)}}">
+<style>
+	   .h33 {
+   	position: relative;
+   	left: 10px;
+   	top: 10px;
+   }
+   	   .h22 {
+   	position: absolute;
+   	left: 10px;
+   	top: 70px;
+   }
+    .h111 {
+   	position: absolute;
+   	left: 400px;
+   	top: -10px;
+   }
+   	   td {
+   	position: relative;
+   	left: 10px;
+   	top: 10px;
+   }
+
+#inputs{
+   	position: relative;
+   	left: 0px;
+   	top: 100px;
+   }
+
+      a {
+    text-decoration: none;
+    color: black;}
+
+       .table1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  border-collapse: collapse;
+  color:black;
+  position:absolute;
+  top: 110px;
+  left: 400px;
+}
+caption {
+  padding: 10px;
+  color: white;
+  background: #8FD4C1;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+.th1 {
+  border-bottom: 3px solid #B9B29F;
+  padding: 10px;
+  text-align: left;
+}
+.td1 {
+  padding: 10px;
+}
+
+.td2 {
+  padding-right: 60px;
+}
+
+.tr1:nth-child(odd) {
+  background: white;
+}
+.tr1:nth-child(even) {
+  background: #E8E6D1;
+}
+
+
+</style>
+</head>
+<body>
+    <br><h1 class="h111">Номерной фонд</h1>
+    </div>
+	<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom">
+	<br><h2 class="h22">Добавление комнаты:</h2>
+	<div id="block1">
+    </div>
+	<div id="line1">
+    </div>
+	<div id="line2">
+    </div>
+
+    <table>
+	<tr><td><a href="/" class="back">< Назад</a></td></tr>
+	</table>
+
+	<div id="position">
+    <form action="/savedetails" method="post">
+    <table>
+		<tr><td>Номер комнаты</td><td><input type="text" name="id_room" class="style_input"></td></tr>
+    	<tr><td>ФИО</td><td><input type="text" name="name" class="style_input"></td></tr>
+    	<tr><td>Почта</td><td><input type="email" name="email" class="style_input"></td></tr>
+    	<tr><td>Дата вселения</td><td><input type="text" name="StartDate" class="style_input"></td></tr>
+		<tr><td>Дата выселения</td><td><input type="text" name="EndDate" class="style_input"></td></tr>
+
+    	<tr><td><input type="submit" value="Добавить комнату" class="style_input2"></td></tr>
+    </table>
+    </form>
+    </div>
+
+<table border="0" class="table1">
+    <thead>
+      <td class="td2">Номер</td>
+      <td class="td2">ФИО</td>
+      <td class="td2">Эл. Почта</td>
+      <td class="td2">Дата вселения</td>
+      <td class="td2">Дата выселения</td>
+    </thead>
+    {% for row in rows %}
+      <tr class="tr1">
+          <td class="td1">{{row["id"]}}</td>
+          <td class="td1">{{row["name"]}}</td>
+          <td class="td1">{{row["email"]}}</td>
+          <td class="td1">{{row["StartDate"]}}</td>
+          <td class="td1">{{row["EndDate"]}}</td>
+      </tr >
+    {% endfor %}
+</table>
+
+</body>
+</html>

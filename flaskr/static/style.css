@@ -1,0 +1,128 @@
+#block1 {
+         display: block;
+         background-color: rgb(196, 196, 196);
+         height: 100vh;
+         width: 320px;
+         position: fixed;
+         top: 0px;
+         left: 0px;
+         z-index: -1;}
+         
+
+#line1 {
+         display: block;
+         background-color: rgb(224, 224, 224);
+         height: 4px;
+         width: 320px;
+         position: absolute;
+         top: 80px;
+         left: 0px;
+         z-index: 1;
+}
+
+#line2 {
+         display: block;
+         background-color: rgb(120, 0, 255);
+         height: 4px;
+         width: 75%;
+         position: absolute;
+         top: 80px;
+         left: 320px;
+         z-index: 0;
+}
+
+.style_input{
+         width: 160px;
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #F6F6f6;
+         border-radius: 8px;
+}
+
+.style_input2{
+         width: 284px;
+         height: 50px;
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #F6F6f6;
+         border-radius: 8px;
+         position:absolute;
+         top: 10px;
+
+}
+
+.style_input2:hover{
+         width: 284px;
+         height: 50px;
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #8A2BE2;
+         border-radius: 8px;
+         position:absolute;
+         top: 10px;
+
+}
+
+.style_input3{
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #F6F6f6;
+         border-radius: 8px;
+         width: 280px;
+         height: 30px;
+
+}
+
+.style_input3:hover{
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #8A2BE2;
+         border-radius: 8px;
+         width: 280px;
+         height: 30px;
+
+}
+
+.back{
+         width: 100px;
+         height: 15px;
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #F6F6f6;
+         border-radius: 8px;
+         position:absolute;
+         top: 65px;
+         left: -10px
+
+}
+
+.back:hover{
+         width: 100px;
+         height: 15px;
+         font-size: 13px;
+         padding: 6px 0 4px 10px;
+         border: 1px solid #cecece;
+         background: #8A2BE2;
+         border-radius: 8px;
+         position:absolute;
+         top: 65px;
+         left: -10px
+
+}
+
+.imgrostelecom{
+        position:absolute;
+         top: 0px;
+         left: 20px
+}
+
+#position {
+         position:absolute;
+         top: 150px;
+}
