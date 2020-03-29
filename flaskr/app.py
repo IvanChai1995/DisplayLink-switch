@@ -29,7 +29,7 @@ def repopulate():
 	return render_template("repopulate.html", rows=rows)
 
 @app.route("/outpopulate")
-def outDatedetails():
+def outpopulate():
 	con = sqlite3.connect("employee.db")
 	con.row_factory = sqlite3.Row
 	cur = con.cursor()
@@ -98,7 +98,7 @@ def outdateDetails():
 			id_room = request.form["id_room"]
 			with sqlite3.connect("employee.db") as con:
 				cur = con.cursor()
-				cur.execute("UPDATE Employees SET name=NULL,email=NULL,StartDate=NULL,EndDate=? WHERE id=? ", (id_room,))
+				cur.execute("UPDATE Employees SET name=NULL,email=NULL,StartDate=NULL,EndDate=NULL WHERE id=? ", (id_room,))
 				con.commit()
 				msg = "Клиент успешно выселен из номера"
 		except:
@@ -134,7 +134,7 @@ def deleterecord():
 	with sqlite3.connect("employee.db") as con:
 		try:
 			cur = con.cursor()
-			cur.execute("delete from Employees where id = ?", id)
+			cur.execute("delete from Employees where id = ?", (id))
 			msg = "record successfuly deleted"
 		except:
 			msg = "can't be deleted"

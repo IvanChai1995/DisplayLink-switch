@@ -1,81 +1,12 @@
 <html>
 <head>
   <title>Flask Home</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=131)}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=174)}}">
   <style type="text/css">
-  	
-a {text-decoration: none;
-    color: black;}
-
-   h2 {
-   	position: relative;
-   	left: 10px;
-   	top: 100px;
-   }
-
-      h3 {
-   	position: relative;
-   	left: 10px;
-   	top: 100px;
-   }
-
-.imgrostelecombanner1{
-        position:absolute;
-         top: 320px;
-         left: 340px;
-         width: 500px;
-         height: 300px;
-}
-
-.imgrostelecombanner2{
-        position:absolute;
-         top: 320px;
-         left: 840px;
-         width: 500px;
-         height: 300px;
-}
-.imgrostelecombanner3{
-        position:absolute;
-         top: 620px;
-         left: 340px;
-         width: 1000px;
-         height: 400px;
-}
-
-.oferta{
-        position:absolute;
-         top: 80px;
-         left: 340px;
-}
-.blockInformation{
-        position:absolute;
-         top: 0px;
-         left: 340px;
-}
-
-.table_info{
-        position:absolute;
-         top: 0px;
-         left: 340px;
-}
-.div11 {
-         width: 1000px;
-         height: 300px;
-                position:absolute;
-         top: 100px;
-         left: 10px;
-}
-
-.td1{
-       position:absolute;
-         top: -10px;
-         left: 60px;
-}
   </style>
 </head>
 <body>
 
-<!--h1 class="blockInformation">Информация</h1-->
 <div>
 <div id="block1">
 </div>
@@ -83,27 +14,27 @@ a {text-decoration: none;
 </div>
   <div id="line2">
 </div>
-<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom">
-<h2>Главное Меню:</h2>
-<h3 class="style_input3"><a href="/add">Добавить комнату</a></h3>
-<h3 class="style_input3"><a href="/view">Комнаты</a></h3>
-<h3 class="style_input3"><a href="/delete">Удалить</a></h3>
-<h3 class="style_input3"><a href="/repopulate">Заселить</a></h3>
-<h3 class="style_input3"><a href="/outpopulate">Выселить</a></h3>
+<img src="{{ url_for('static', filename='PNG1.png') }}" alt="ops image" class="imgrostelecom_index">
+<h2 class="h2_index">Главное Меню:</h2>
+<h3 class="style_input3_index"><a href="/add">Добавить комнату</a></h3>
+<h3 class="style_input3_index"><a href="/view">Комнаты</a></h3>
+<h3 class="style_input3_index"><a href="/delete">Удалить</a></h3>
+<h3 class="style_input3_index"><a href="/repopulate">Заселить</a></h3>
+<h3 class="style_input3_index"><a href="/outpopulate">Выселить</a></h3>
 
 </div>
 
-<img src="{{ url_for('static', filename='PNG2.png') }}" alt="ops image" class="imgrostelecombanner1">
-<img src="{{ url_for('static', filename='PNG3.png') }}" alt="ops image" class="imgrostelecombanner2">
-<img src="{{ url_for('static', filename='PNG4.png') }}" alt="ops image" class="imgrostelecombanner3">
+<img src="{{ url_for('static', filename='PNG2.png') }}" alt="ops image" class="imgrostelecombanner1_index">
+<img src="{{ url_for('static', filename='PNG3.png') }}" alt="ops image" class="imgrostelecombanner2_index">
+<img src="{{ url_for('static', filename='PNG4.png') }}" alt="ops image" class="imgrostelecombanner3_index">
 
-<table class="table_info" border="0">
+<table class="table_info_index" border="0">
     <thead>
-      <td class="td1"><h1>Информация</h1></td>
+      <td class="td1_index"><h1>Информация</h1></td>
     </thead>
     {% for row in rows %}
       <tr class="tr1">
-         <td class="div11">{{row["info"]}}</td>
+         <td class="div11_index">{{row["info"]}}</td>
       </tr>
     {% endfor %}
 </table>
